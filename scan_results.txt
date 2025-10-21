@@ -1,0 +1,14 @@
+# Nmap 7.95 scan initiated [REDACTED_TIMESTAMP] as: [REDACTED_PATH] -sS -oN scan_results.txt -oX scan_results.xml 10.x.x.x/24
+Nmap scan report for 10.x.x.x
+Host is up (0.0019s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: [REDACTED_MAC] (Unknown)
+
+Nmap scan report for 10.x.x.x
+Host is up (0.0000040s latency).
+All 1000 scanned ports on 10.x.x.x are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+# Nmap done at [REDACTED_TIMESTAMP] -- 256 IP addresses (2 hosts up) scanned in [REDACTED] seconds
