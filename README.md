@@ -102,10 +102,10 @@ Reinforced the importance of ethical practices and controlled testing in cyberse
 📁 Repository Structure
 
 README.md
-Nmap_output.png        # Screenshot of Nmap scan output
-Scan_Result.txt        # Nmap scan output in text format
-Scan_Result.xml        # Nmap scan output in XML format
-Wireshark_capture.png  # Screenshot of packet capture (optional)
+Nmap_output.png        
+Scan_Result.txt        
+Scan_Result.xml        
+Wireshark_capture.png  
 
 
 ---
@@ -154,5 +154,6 @@ All scanning and packet captures were performed on self-owned networks. Do not a
 
 Aashish Bishokarma
 Cyber Security Student | Ethical Hacking Enthusiast
+
 📧 Email: aashishgorkhali0@gmail.com
 🌐 GitHub: DarkCipherAashish
