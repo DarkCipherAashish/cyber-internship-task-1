@@ -4,8 +4,8 @@ This document outlines the process and findings of a local network port scan con
 To perform a local network scan to discover open ports on active devices and understand potential network exposure.
 💻 Environment & Tools
  * 🖥️ Operating System: Kali Linux (Live Boot)
- * 🛠️ Core Tool: Nmap (Network Mapper) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/a/a6/Nmap_logo.svg" alt="Nmap logo" height="20" style="vertical-align:middle;">
- * 🔬 Optional Tool: Wireshark (for packet-level insight) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/8/82/Wireshark_Icon.svg" alt="Wireshark logo" height="20" style="vertical-align:middle;">
+ * 🛠️ Core Tool: Nmap (Network Mapper) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nmap_logo.svg/32px-Nmap_logo.svg.png" alt="Nmap logo" height="20" style="vertical-align:middle;">
+ * 🔬 Optional Tool: Wireshark (for packet-level insight) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wireshark_Icon.svg/32px-Wireshark_Icon.svg.png" alt="Wireshark logo" height="20" style="vertical-align:middle;">
  * 🌐 Network: Personal mobile-hotspot test network (10.x.x.x/24)
 ⚙️ Steps Executed
  * Determined the private IP range (10.x.x.x/24) of the test network using ifconfig.
@@ -29,7 +29,7 @@ To perform a local network scan to discover open ports on active devices and und
  * ✅ Gained practical experience using Nmap for network reconnaissance and port scanning.
  * ✅ Developed the ability to interpret Nmap scan outputs and correlate open ports with their corresponding network services.
  * ✅ Reinforced the importance of responsible disclosure, privacy, and ethical boundaries when handling network scan data.
-👨‍💻 Author
+EXAMPLE:
 Aashish Bishokarma
 Cyber Security Student | Ethical Hacking Enthusiast
 📧 Email: aashishgorkhali0@gmail.com
