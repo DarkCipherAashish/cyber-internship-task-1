@@ -1,33 +1,36 @@
-# Cyber Security Internship – Task 1: Local Network Port Scan 
+🛡️ Cyber Security Internship – Task 1: Local Network Port Scan
+This document outlines the process and findings of a local network port scan conducted as part of a cybersecurity internship. The goal was to discover open ports on active devices and understand potential network exposure in a controlled, isolated test environment.
+🎯 Objective
+To perform a local network scan to discover open ports on active devices and understand potential network exposure.
+💻 Environment & Tools
+ * 🖥️ Operating System: Kali Linux (Live Boot)
+ * 🛠️ Core Tool: Nmap (Network Mapper) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/a/a6/Nmap_logo.svg" alt="Nmap logo" height="20" style="vertical-align:middle;">
+ * 🔬 Optional Tool: Wireshark (for packet-level insight) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/8/82/Wireshark_Icon.svg" alt="Wireshark logo" height="20" style="vertical-align:middle;">
+ * 🌐 Network: Personal mobile-hotspot test network (10.x.x.x/24)
+⚙️ Steps Executed
+ * Determined the private IP range (10.x.x.x/24) of the test network using ifconfig.
+ * Ran a stealthy SYN scan (-sS) across the entire subnet to identify active hosts and open ports.
+   sudo nmap -sS 10.x.x.x/24
 
-## Objective
-Performed a local network scan to discover open ports on active devices and understand potential network exposure.
-
-## Environment
-- Operating System: Kali Linux (Live Boot)
-- Tools Used: Nmap, Wireshark (optional)
-- Network: Personal mobile-hotspot test network (10.x.x.x/24)
-
-## Steps Executed
-1. Determined the private IP range (10.x.x.x/24) using ifconfig.
-2. Ran a SYN scan with: sudo nmap -sS 10.x.x.x/24
-3. Saved results to scan_results.txt.
-4. Optionally captured traffic using Wireshark for packet-level insight.
-5. Identified services associated with detected open ports.
-
-## Key Findings
-- Total scanned hosts: 256
-- Active hosts: 2
-- Example open port: 53/tcp (open DNS service) on one test device (10.x.x.x).
-- Other host: All ports in closed or filtered state.
-- Detailed logs: See scan_results.txt and nmap_output.png.
-
-## Security Observations
-- The discovered open port (53/tcp) corresponds to the DNS service, which is typical in most networks.
-- Continuous monitoring of open ports is essential to reduce unnecessary exposure.
-- Scans were conducted only on a controlled, self-owned test network — no external or institutional systems were probed.
-
-## Learnings
-- Learned practical usage of Nmap for reconnaissance and port scanning.
-- Understood how to interpret scan outputs and correlate them with real network services.
-- Gained awareness of responsible disclosure and privacy when handling scan data.
+ * Saved the complete scan results to scan_results.txt for analysis.
+ * (Optional) Captured scan traffic using Wireshark to observe the SYN packet exchange at a granular level.
+ * Analyzed the output to identify services associated with the detected open ports.
+📊 Key Findings
+ * 📡 Total Scanned Hosts: 256
+ * 🖥️ Active Hosts Detected: 2
+ * 🚪 Example Open Port: 53/tcp was found open on one test device (10.x.x.x), corresponding to the DNS (Domain Name System) service.
+ * 🔒 Other Host: All scanned ports were in a closed or filtered state.
+ * 📄 Detailed Logs: Refer to scan_results.txt and nmap_output.png (if included in this repository).
+🧐 Security Observations
+ * 🔵 The discovered 53/tcp (DNS) port is a common and often necessary service for network functionality.
+ * 🟡 This exercise demonstrates that even simple networks can have open ports. Continuous monitoring is essential to minimize the attack surface and reduce unnecessary exposure.
+ * 🟢 Ethical Scoping: All scans were conducted strictly on a controlled, self-owned test network. No external or institutional systems were probed, adhering to ethical hacking principles.
+🧠 Learnings & Key Takeaways
+ * ✅ Gained practical experience using Nmap for network reconnaissance and port scanning.
+ * ✅ Developed the ability to interpret Nmap scan outputs and correlate open ports with their corresponding network services.
+ * ✅ Reinforced the importance of responsible disclosure, privacy, and ethical boundaries when handling network scan data.
+👨‍💻 Author
+Aashish Bishokarma
+Cyber Security Student | Ethical Hacking Enthusiast
+📧 Email: aashishgorkhali0@gmail.com
+🌐 GitHub: DarkCipherAashish
