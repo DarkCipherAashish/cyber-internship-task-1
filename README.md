@@ -1,35 +1,157 @@
 🛡️ Cyber Security Internship – Task 1: Local Network Port Scan
-This document outlines the process and findings of a local network port scan conducted as part of a cybersecurity internship. The goal was to discover open ports on active devices and understand potential network exposure in a controlled, isolated test environment.
-🎯 Objective
-To perform a local network scan to discover open ports on active devices and understand potential network exposure.
-💻 Environment & Tools
- * 🖥️ Operating System: Kali Linux (Live Boot)
- * 🛠️ Core Tool: Nmap (Network Mapper) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Nmap_logo.svg/32px-Nmap_logo.svg.png" alt="Nmap logo" height="20" style="vertical-align:middle;">
- * 🔬 Optional Tool: Wireshark (for packet-level insight) <img src="https://www.google.com/search?q=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wireshark_Icon.svg/32px-Wireshark_Icon.svg.png" alt="Wireshark logo" height="20" style="vertical-align:middle;">
- * 🌐 Network: Personal mobile-hotspot test network (10.x.x.x/24)
-⚙️ Steps Executed
- * Determined the private IP range (10.x.x.x/24) of the test network using ifconfig.
- * Ran a stealthy SYN scan (-sS) across the entire subnet to identify active hosts and open ports.
-   sudo nmap -sS 10.x.x.x/24
 
- * Saved the complete scan results to scan_results.txt for analysis.
- * (Optional) Captured scan traffic using Wireshark to observe the SYN packet exchange at a granular level.
- * Analyzed the output to identify services associated with the detected open ports.
+📖 Project Overview
+
+This repository contains the deliverables for Task 1 of the Cyber Security Internship. The task focuses on conducting a local network port scan to identify active hosts, open ports, and associated services on a controlled test network.
+
+
+---
+
+🎯 Objective
+
+Perform a comprehensive scan of the local network.
+
+Discover active hosts and open ports.
+
+Analyze potential network exposure in a safe, ethical, and controlled environment.
+
+
+
+---
+
+💻 Environment & Tools
+
+🖥️ Operating System: Kali Linux (Live Boot) 
+
+🛠️ Primary Tool: Nmap (Network Mapper) 
+
+🔍 Optional Tool: Wireshark (packet-level inspection) 
+
+🌐 Network: Personal mobile-hotspot test network (10.x.x.x/24)
+
+
+
+---
+
+⚙️ Methodology
+
+1. Identify the subnet of the test network using ifconfig or ip addr.
+
+
+2. Conduct a stealth SYN scan across the subnet to detect active hosts and open ports:
+
+
+
+sudo nmap -sS 10.x.x.x/24 -oN Scan_Result.txt -oX Scan_Result.xml
+
+3. Save and analyze scan results (Scan_Result.txt and Scan_Result.xml) to identify hosts and services.
+
+
+4. Optionally capture network traffic using Wireshark for granular SYN/SYN-ACK inspection.
+
+
+5. Document findings and highlight potential security observations.
+
+
+
+
+---
+
 📊 Key Findings
- * 📡 Total Scanned Hosts: 256
- * 🖥️ Active Hosts Detected: 2
- * 🚪 Example Open Port: 53/tcp was found open on one test device (10.x.x.x), corresponding to the DNS (Domain Name System) service.
- * 🔒 Other Host: All scanned ports were in a closed or filtered state.
- * 📄 Detailed Logs: Refer to scan_results.txt and nmap_output.png (if included in this repository).
+
+Total Scanned Hosts: 256
+
+Active Hosts Detected: 2
+
+Example Open Port: 53/tcp (DNS) on 10.x.x.x
+
+Other Hosts: All scanned ports were either closed or filtered
+
+
+> Note: All scanning activities were performed within a controlled and ethical environment.
+
+
+
+
+---
+
 🧐 Security Observations
- * 🔵 The discovered 53/tcp (DNS) port is a common and often necessary service for network functionality.
- * 🟡 This exercise demonstrates that even simple networks can have open ports. Continuous monitoring is essential to minimize the attack surface and reduce unnecessary exposure.
- * 🟢 Ethical Scoping: All scans were conducted strictly on a controlled, self-owned test network. No external or institutional systems were probed, adhering to ethical hacking principles.
-🧠 Learnings & Key Takeaways
- * ✅ Gained practical experience using Nmap for network reconnaissance and port scanning.
- * ✅ Developed the ability to interpret Nmap scan outputs and correlate open ports with their corresponding network services.
- * ✅ Reinforced the importance of responsible disclosure, privacy, and ethical boundaries when handling network scan data.
-EXAMPLE:
+
+53/tcp is a common service (DNS); always monitor to prevent potential abuse.
+
+Even small networks may have exposed services; minimizing unnecessary open ports reduces attack surface.
+
+Ethical scanning ensures no legal or privacy violations while practicing cybersecurity skills.
+
+
+
+---
+
+🧾 Learnings & Takeaways
+
+Hands-on experience with Nmap for network reconnaissance.
+
+Ability to interpret scan outputs and associate ports with corresponding services.
+
+Reinforced the importance of ethical practices and controlled testing in cybersecurity.
+
+
+
+---
+
+📁 Repository Structure
+
+README.md
+Nmap_output.png        # Screenshot of Nmap scan output
+Scan_Result.txt        # Nmap scan output in text format
+Scan_Result.xml        # Nmap scan output in XML format
+Wireshark_capture.png  # Screenshot of packet capture (optional)
+
+
+---
+
+🔄 How to Reproduce
+
+1. Boot Kali Linux on a test machine.
+
+
+2. Connect to a controlled network (e.g., 10.x.x.x/24).
+
+
+3. Execute the Nmap scan command.
+
+
+4. Review Scan_Result.txt or visualize Scan_Result.xml in Zenmap.
+
+
+5. Optionally, inspect packet captures in Wireshark or open Wireshark_capture.png.
+
+
+
+
+---
+
+📝 Suggested Git Commit Messages
+
+Initial Commit: chore: add README and initial Nmap scan results
+
+Add Nmap screenshot: docs: add Nmap_output.png for scan visualization
+
+Add Wireshark capture: feat: add Wireshark_capture.png for packet inspection
+
+
+
+---
+
+⚖️ Ethical Considerations
+
+All scanning and packet captures were performed on self-owned networks. Do not attempt unauthorized scanning on external or public networks.
+
+
+---
+
+👤 Author
+
 Aashish Bishokarma
 Cyber Security Student | Ethical Hacking Enthusiast
 📧 Email: aashishgorkhali0@gmail.com
